@@ -1,0 +1,19 @@
+{
+	"folders": [
+		{
+			"name": "mini-projects",
+			"path": ".."
+		},
+		{
+			"name": "miniproject",
+			"path": "..\\..\\..\\miniproject"
+		},
+		{
+			"name": "images",
+			"path": "..\\email-subscribe\\images"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "miniproject"
+	}
+}
