@@ -1,0 +1,137 @@
+<nav class="container relative mx-auto p-6">
+  <!-- Flex Container For Nav Items -->
+  <div class="flex items-center justify-between space-x-10 my-1">
+    <!-- Logo -->
+    <div class="z-30">
+      <h1 class="text-black text-3xl rounded-md font-bold">Smartsell</h1>
+    </div>
+
+    <!-- Menu Items -->
+    <div
+      class="hidden items-center space-x-10 uppercase text-grayishBlue md:flex"
+    >
+    <a href="#features" class="tracking-widest hover:text-softRed"
+    >About</a
+  >
+  <a href="#download" class="tracking-widest hover:text-softRed"
+    >FAQ</a>
+    <a
+    href=""
+    class="px-8 py-2 text-black bg-softRed border-2 border-softRed rounded-lg shadow-md hover:text-softRed hover:bg-green-300 text2xl text-grayishBlue"
+    >Contact Us</a
+  >
+
+    </div>
+    <!-- Hamburger Button -->
+    <button
+      id="menu-btn"
+      class="z-30 block md:hidden focus:outline-none hamburger"
+    >
+      <span class="hamburger-top"></span>
+      <span class="hamburger-middle"></span>
+      <span class="hamburger-bottom"></span>
+    </button>
+  </div>
+  <!-- Mobile Menu -->
+  <div
+    id="menu"
+    class="fixed inset-0 z-20 hidden flex-col items-center self-end w-full h-full m-h-screen px-6 py-1 pt-24 pb-4 tracking-widest text-white uppercase divide-y divide-gray-500 opacity-90 bg-veryDarkBlue"
+  >
+  <a href="about" class="tracking-widest hover:text-softRed"
+  >About</a
+>
+<a href="" class="tracking-widest hover:text-softRed"
+  >FAQ</a>
+  <a
+  href=""
+  class="px-8 py-2 text-black bg-softRed border-2 border-softRed rounded-lg shadow-md hover:text-softRed hover:bg-green-300 text2xl text-grayishBlue"
+  >Contact Us</a
+>
+  </div>
+</nav>
+    <!-- Jumbotron -->
+    <div class="container py-4">
+      <div class="row g-0 align-items-center">
+        <div class="col-lg-6 mb-5 mb-lg-0">
+          <div class="card cascading-right" style="
+              background: hsla(0, 0%, 100%, 0.55);
+              backdrop-filter: blur(30px);
+              ">
+            <div class="card-body p-5 shadow-5 text-center">
+              <h2 class="fw-bold mb-5">Sign up now</h2>
+              <form>
+                <!-- 2 column grid layout with text inputs for the first and last names -->
+                <div class="row">
+                  <div class="col-md-6 mb-4">
+                    <div class="form-outline">
+                      <input type="text" id="form3Example1" class="form-control" />
+                      <label class="form-label" for="form3Example1">First name</label>
+                    </div>
+                  </div>
+                  <div class="col-md-6 mb-4">
+                    <div class="form-outline">
+                      <input type="text" id="form3Example2" class="form-control" />
+                      <label class="form-label" for="form3Example2">Last name</label>
+                    </div>
+                  </div>
+                </div>
+  
+                <!-- Email input -->
+                <div class="form-outline mb-4">
+                  <input type="email" id="form3Example3" class="form-control" />
+                  <label class="form-label" for="form3Example3">Email address</label>
+                </div>
+  
+                <!-- Password input -->
+                <div class="form-outline mb-4">
+                  <input type="password" id="form3Example4" class="form-control" />
+                  <label class="form-label" for="form3Example4">Password</label>
+                </div>
+  
+                <!-- Checkbox -->
+                <!-- <div class="form-check d-flex justify-content-center mb-4">
+                  <input class="form-check-input me-2" type="checkbox" value="" id="form2Example33" checked />
+                  <label class="form-check-label" for="form2Example33">
+                    Subscribe to our newsletter
+                  </label>
+                </div> -->
+  
+                <!-- Submit button -->
+                <button type="submit" class="btn btn-dark btn-lg btn-block mb-4" routerLink="/login">
+                  Sign up
+                </button>
+  
+                <!-- Register buttons -->
+                <div class="text-center">
+                  <!-- <p>or sign up with:</p> -->
+                  <button type="button" class="btn btn-link btn-floating mx-1">
+                    <i class="fab fa-facebook-f"></i>
+                  </button>
+  
+                  <button type="button" class="btn btn-link btn-floating mx-1">
+                    <i class="fab fa-google"></i>
+                  </button>
+  
+                  <button type="button" class="btn btn-link btn-floating mx-1">
+                    <i class="fab fa-twitter"></i>
+                  </button>
+  
+                  <button type="button" class="btn btn-link btn-floating mx-1">
+                    <i class="fab fa-github"></i>
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+  
+        <div class="col-lg-6 mb-5 mb-lg-0">
+          <img src="assets\Pictures\about-02.jpg" class="w-100 rounded-4 shadow-4"
+            alt="" />
+        </div>
+      </div>
+    </div>
+ <app-footer></app-footer>
+    <!-- Jumbotron -->
+  
+  <!-- Section: Design Block -->

@@ -1,0 +1,22 @@
+
+      .cascading-right {
+        margin-right: -50px;
+      }
+  
+      @media (max-width: 991.98px) {
+        .cascading-right {
+          margin-right: 0;
+        }
+      }
+    .navbar {
+      background-color: rgb(10, 220, 181);
+      color: rgb(224, 231, 227);
+      padding: 15px;
+    }
+    .nav{
+      background-color: rgb(10, 220, 181);
+      color: rgb(224, 231, 227);
+      padding: 30px;
+    }
+   
+    

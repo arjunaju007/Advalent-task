@@ -1,0 +1,56 @@
+ <app-nav-bar></app-nav-bar>
+<section class="hero">
+  <div class="container">
+    <div class="hero-content">
+      <h1>Welcome to Our Online Store</h1>
+      <p>Discover a wide range of products at affordable prices.</p>
+    </div>
+    <div class="hero-image flex">
+      <img src="assets/Pictures/product-13.jpg" alt="Hero Image">
+      <img src="assets/Pictures/product-03.jpg" alt="Hero Image">
+      <!-- <img src="assets/Pictures/product-02.jpg" alt="Hero Image"> -->
+    </div><br><br>
+    <div class="flex justify-center">
+      <a
+        href="product"
+        class="px-8 py-2 text-black bg-softRed border-2 border-softRed rounded-lg shadow-md hover:text-softRed hover:bg-green-300 text2xl text-grayishBlue"
+        >Shop Now</a
+      >
+    </div>
+    
+
+   
+   
+<section class="featured-products">
+  <div class="container">
+    <h2>Featured Products</h2>
+    <div class="product-list">
+      <div class="product" *ngFor="let product of featuredProducts">
+        <img [src]="product.image" alt="Product Image" class="product-image">
+        <h3>{{ product.name }}</h3>
+        <p>{{ product.price }}</p>
+        <p>{{product.quantity}}</p>
+        <a class="btn" (click)="openPopup()">View Details</a>
+      </div>
+    </div>
+  </div>
+  <div id="myPopup" class="popup" [ngClass]="{ 'show': showPopup }">
+    <!-- Content of the popup -->
+    <ul>
+      <li>StyleCode: AGWT31900949</li>
+      <li>Pattern: Print</li>
+      <li>Sleeves: Sleeveless</li>
+      <li>Occasion: Casual</li>
+      <li>Color: Black</li>
+      <li>Subbrand: Allen Solly Junior</li>
+      <li>ProductType: Top</li>
+      <li>Material: 100% Viscose</li>
+      <li>Brand: Allen Solly</li>
+      <li>Fit: Regular Fit</li>
+      <li>Neck: Round Neck</li>
+      <li>BrandFit: Regular Fit</li>
+    </ul>
+    <button (click)="closePopup()">Close</button>
+  </div>
+</section>
+<app-footer></app-footer>

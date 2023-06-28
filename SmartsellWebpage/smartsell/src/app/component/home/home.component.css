@@ -1,0 +1,170 @@
+.hero {
+  background-color: #f8f8f8;
+  padding: 40px 0;
+}
+
+.hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.hero-content h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  font-size: 18px;
+  line-height: 1.5;
+  margin-bottom: 30px;
+}
+
+.hero-image {
+  text-align: center;
+}
+
+.hero-image img {
+  max-width: 50%;
+  height: 20%;
+}
+
+.featured-products {
+  padding: 40px 0;
+}
+
+.featured-products h2 {
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.product {
+  width: 250px;
+  margin: 10px;
+  text-align: center;
+}
+
+.product-image {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.product h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.product p {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 18px;
+  color: #fff;
+  background-color: rgb(22, 244, 174);
+  border: none;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: rgb(17, 239, 217);
+}
+.navbar {
+  background-color: rgb(22, 244, 174);;
+  color: rgb(224, 231, 227);
+  padding: 15px;
+}
+.nav{
+  background-color: rgb(22, 244, 174);
+  color: rgb(224, 231, 227);
+  padding: 30px;
+}
+/* Popup container */
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  z-index: 9999;
+  display: none;
+}
+
+/* Show the popup when the showPopup class is applied */
+.popup.show {
+  display: block;
+}
+
+/* Popup content */
+.popup ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.popup ul li {
+  margin-bottom: 10px;
+}
+
+.popup button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: rgb(15, 16, 16);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.popup button:hover {
+  background-color: rgb(22, 244, 174);
+}
+/* Add this CSS code at the end of the existing CSS code */
+
+.product-list .product.blurred img {
+  filter: blur(4px);
+}
+
+.product-list .product .btn {
+  transition: background-color 0.3s ease;
+}
+
+.product-list .product.blurred .btn {
+  pointer-events: none;
+  background-color: rgba(0, 0, 0, 0.5);
+  cursor: not-allowed;
+}
+
+.popup.show + .product-list .product img {
+  filter: blur(4px);
+}
+
+.popup.show + .product-list .product .btn {
+  pointer-events: none;
+  background-color: rgba(0, 0, 0, 0.5);
+  cursor: not-allowed;
+}
+img:hover {
+  transform: scale(1.1); /* Scale up the image on hover */
+  /*opacity: 0.6; /* Reduce the opacity of the image on hover */
+  
+}

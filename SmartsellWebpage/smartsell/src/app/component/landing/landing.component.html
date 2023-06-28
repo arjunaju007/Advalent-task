@@ -1,0 +1,83 @@
+<nav class="container relative mx-auto p-6">
+    <!-- Flex Container For Nav Items -->
+    <div class="flex items-center justify-between space-x-10 my-1">
+      <!-- Logo -->
+      <div class="z-30">
+        <h1 class="text-black text-3xl rounded-md font-bold">Smartsell</h1>
+      </div>
+  
+      <!-- Menu Items -->
+      <div
+        class="hidden items-center space-x-10 uppercase text-grayishBlue md:flex"
+      >
+        <a href="#features" class="tracking-widest hover:text-softRed"
+          >About</a
+        >
+        <a href="#download" class="tracking-widest hover:text-softRed"
+          >FAQ</a>
+          <a
+          href=""
+          class="px-8 py-2 text-black bg-softRed border-2 border-softRed rounded-lg shadow-md hover:text-softRed hover:bg-green-300 text2xl text-grayishBlue"
+          >Contact Us</a
+        >
+     
+      </div>
+      <!-- Hamburger Button -->
+      <button
+        id="menu-btn"
+        class="z-30 block md:hidden focus:outline-none hamburger"
+      >
+        <span class="hamburger-top"></span>
+        <span class="hamburger-middle"></span>
+        <span class="hamburger-bottom"></span>
+      </button>
+    </div>
+    <!-- Mobile Menu -->
+    <div
+      id="menu"
+      class="fixed inset-0 z-20 hidden flex-col items-center self-end w-full h-full m-h-screen px-6 py-1 pt-24 pb-4 tracking-widest text-white uppercase divide-y divide-gray-500 opacity-90 bg-veryDarkBlue"
+    >
+      <div class="w-full py-3 text-center">
+        <a href="#features" class="tracking-widest hover:text-softRed"
+        >About</a
+      >
+      <a href="#download" class="tracking-widest hover:text-softRed"
+        >FAQ</a>
+        <a
+        href=""
+        class="px-8 py-2 text-black bg-softRed border-2 border-softRed rounded-lg shadow-md hover:text-softRed hover:bg-green-300 text2xl text-grayishBlue"
+        >Contact Us</a
+      >
+      </div>
+    </div>
+  </nav>
+  <section class="hero">
+      <div class="container">
+        <div class="hero-content">
+         
+          <h1>Welcome to Our Online Store</h1>
+          <p>Discover a wide range of products at affordable prices.</p>
+            <a
+          href="login"
+          class="px-8 py-2 text-black bg-softRed border-2 border-softRed rounded-lg shadow-md hover:text-softRed hover:bg-green-300"
+          >Login</a
+        >&nbsp;
+        <a
+        href="register"
+        class="px-8 py-2 text-black bg-softRed border-2 border-softRed rounded-lg shadow-md hover:text-softRed hover:bg-green-300"
+        >Signup</a
+      ><br><br>
+         
+        </div>
+        <div class="hero-image flex">
+          <img src="assets\Pictures\product-02.jpg" alt="Hero Image">
+          <img src="assets\Pictures\product-11.jpg" alt="Hero Image">
+          
+          <!-- <img src="assets\Pictures\product-02.jpg" alt="Hero Image"> -->
+        </div>
+  </div>
+  <app-footer></app-footer>
+  
+  
+       
+   

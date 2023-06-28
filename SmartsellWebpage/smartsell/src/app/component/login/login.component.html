@@ -1,0 +1,88 @@
+<nav class="container relative mx-auto p-6">
+  <!-- Flex Container For Nav Items -->
+  <div class="flex items-center justify-between space-x-10 my-1">
+    <!-- Logo -->
+    <div class="z-30">
+      <h1 class="text-black text-3xl rounded-md font-bold">Smartsell</h1>
+    </div>
+
+    <!-- Menu Items -->
+    <div
+      class="hidden items-center space-x-10 uppercase text-grayishBlue md:flex"
+    >
+    <a href="#features" class="tracking-widest hover:text-softRed"
+    >About</a
+  >
+  <a href="#download" class="tracking-widest hover:text-softRed"
+    >FAQ</a>
+    <a
+    href=""
+    class="px-8 py-2 text-black bg-softRed border-2 border-softRed rounded-lg shadow-md hover:text-softRed hover:bg-green-300 text2xl text-grayishBlue"
+    >Contact Us</a
+  >
+
+    </div>
+    <!-- Hamburger Button -->
+    <button
+      id="menu-btn"
+      class="z-30 block md:hidden focus:outline-none hamburger"
+    >
+      <span class="hamburger-top"></span>
+      <span class="hamburger-middle"></span>
+      <span class="hamburger-bottom"></span>
+    </button>
+  </div>
+  <!-- Mobile Menu -->
+  <div
+    id="menu"
+    class="fixed inset-0 z-20 hidden flex-col items-center self-end w-full h-full m-h-screen px-6 py-1 pt-24 pb-4 tracking-widest text-white uppercase divide-y divide-gray-500 opacity-90 bg-veryDarkBlue"
+  >
+  <a href="#features" class="tracking-widest hover:text-softRed"
+  >About</a
+>
+<a href="#download" class="tracking-widest hover:text-softRed"
+  >FAQ</a>
+  <a
+  href=""
+  class="px-8 py-2 text-black bg-softRed border-2 border-softRed rounded-lg shadow-md hover:text-softRed hover:bg-green-300 text2xl text-grayishBlue"
+  >Contact Us</a
+>
+  </div>
+</nav>
+
+<section class="min-h-screen bg-gray-100">
+  <div class="container py-5 flex justify-center items-center h-full">
+    <div class="w-full md:w-8/12 lg:w-7/12 xl:w-6/12">
+      <div class="bg-white rounded-lg shadow-lg">
+        <div class="flex flex-col md:flex-row">
+          <div class="md:w-5/12 lg:w-7/12 xl:w-5/12">
+            <img src="assets\Pictures\product-05.jpg" alt="login form" class="w-full h-64 md:h-full object-cover rounded-t-lg md:rounded-l-lg" />
+          </div>
+          <div class="md:w-7/12 xl:w-7/12 p-4 md:p-8 flex items-center">
+            <div class="w-full">
+              <form (ngSubmit)="login()">
+                <div class="flex items-center mb-3 pb-1">
+                  <i class="fas fa-cubes fa-2x me-3 text-orange-500"></i>
+                  <span class="text-4xl font-bold mb-0">Smartsell</span>
+                </div>
+                <h5 class="font-normal mb-3 pb-3 text-lg" style="letter-spacing: 1px;">Sign into your account</h5>
+                <div class="mb-4">
+                  <input type="text" name="username" id="form2Example17" class="form-control form-control-lg py-2 px-4 rounded-lg w-full" [(ngModel)]="username" placeholder="Email address" />
+                </div>
+                <div class="mb-4">
+                  <input type="password" name="password" id="form2Example27" class="form-control form-control-lg py-2 px-4 rounded-lg w-full" [(ngModel)]="password" placeholder="Password" />
+                </div>
+                <div class="mb-4">
+                  <button class="bg-gray-900 text-white rounded-lg py-3 px-6 w-full" type="submit">Login</button>
+                </div>
+                <a class="text-sm text-gray-500" href="#!">Forgot password?</a>
+                <p class="mt-5 text-gray-700">Don't have an account? <a href="/register" class="text-blue-500">Register here</a></p>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<app-footer></app-footer>
