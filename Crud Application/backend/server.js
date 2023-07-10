@@ -2,7 +2,9 @@ const express = require('express')
 const bodyParser = require('body-parser')
 const mysql = require("mysql");
 const server = express();
+const cors = require('cors'); 
 server.use(bodyParser.json());
+server.use(cors());
 
 //Establish the database connection
 const db = mysql.createConnection({
@@ -21,7 +23,7 @@ db.connect(function (error) {
   });
 
 //specify port
-  server.listen(8085,function check(error) {
+  server.listen(8080,function check(error) {
     if (error) 
     {
     console.log("Error....dddd!!!!");
@@ -48,6 +50,7 @@ server.post("/api/student/add", (req, res) => {
         res.send({ status: true, message: "Student created successfully" });
       }
     });
+  
   });
 
   
@@ -98,5 +101,18 @@ server.put("/api/student/update/:id", (req, res) => {
       }
     });
   });
+
+
+    //Delete the Records
+    server.delete("/api/student/delete/:id", (req, res) => {
+      let sql = "DELETE FROM student WHERE id=" + req.params.id + "";
+      let query = db.query(sql, (error) => {
+        if (error) {
+          res.send({ status: false, message: "Student Deleted Failed" });
+        } else {
+          res.send({ status: true, message: "Student Deleted successfully" });
+        }
+      });
+    });
 
   

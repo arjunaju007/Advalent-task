@@ -1,5 +1,5 @@
-import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
+import { StudentServiceService } from '../student-service.service';
 
 @Component({
   selector: 'app-main',
@@ -7,106 +7,40 @@ import { Component } from '@angular/core';
   styleUrls: ['./main.component.css']
 })
 export class MainComponent {
-
-  
-  StudentArray : any[] = [];
+  studentService: StudentServiceService;
+  StudentArray: any[] = [];
   isResultLoaded = false;
-  isUpdateFormActive = false;
-  stname: string ="";
-  course: string ="";
-  fee: string ="";
-  currentStudentID = "";
+  stname: string = "";
+  course: string = "";
+  fee: string = "";
 
-  constructor(private http: HttpClient ) 
-  {
-    this.getAllStudent();
-  }
-
-  ngOnInit(): void {
-  }
-  getAllStudent()
-  { 
-    this.http.get("http://localhost:9002/api/student/")
-    .subscribe((resultData: any)=>
-    {
-        this.isResultLoaded = true;
-        console.log(resultData.data);
-        this.StudentArray = resultData.data;
-    });
+  constructor(private _studentService: StudentServiceService) {
+    this.studentService = _studentService; // Assign _studentService to studentService
   }
 
 
-  register()
-  {
-   // this.isLogin = false; 
-   // alert("hi");
-    let bodyData = {
-      "stname" : this.stname,
-      "course" : this.course,
-      "fee" : this.fee,
-    };
-    this.http.post("http://localhost:9002/api/student/add",bodyData).subscribe((resultData: any)=>
-    {
-        console.log(resultData);
-        alert("Employee Registered Successfully")
-        this.getAllStudent();
-      //  this.name = '';
-      //  this.address = '';
-      //  this.mobile  = 0;
-    });
-  }
-
-
-  setUpdate(data: any) 
-  {
-   this.stname = data.stname;
-   this.course = data.course;
-   this.fee = data.fee;
+  onSubmit(): void {
+    this.studentService.stname = this.stname;
+    this.studentService.course = this.course;
+    this.studentService.fee = this.fee;
+    this.studentService.register();
   
-   this.currentStudentID = data.id;
- 
+    // Clear input fields after submitting
+    this.stname = "";
+    this.course = "";
+    this.fee = "";
   }
 
-  
-  UpdateRecords()
-  {
-    let bodyData = 
-    {
-      "stname" : this.stname,
-      "course" : this.course,
-      "fee" : this.fee
-    };
-    this.http.put("http://localhost:9002/api/student/update"+ "/"+ this.currentStudentID,bodyData).subscribe((resultData: any)=>
-    {
-        console.log(resultData);
-        alert("Student Registered Updateddd")
-        this.getAllStudent();
-      
-    });
-  }
-
-  save()
-  {
-    if(this.currentStudentID == '')
-    {
-        this.register();
-    }
-      else
-      {
-       this.UpdateRecords();
-      }       
+  updateRecords(): void {
+    this.studentService.updateRecords();
   }
 
 
-  setDelete(data: any)
-  {
-    this.http.delete("http://localhost:9002/api/student/delete"+ "/"+ data.id).subscribe((resultData: any)=>
-    {
-        console.log(resultData);
-        alert("Student Deletedddd")
-        this.getAllStudent();
-    });
+  setUpdate(studentItem: any): void {
+    this.studentService.setUpdate(studentItem);
+  }
+
+  setDelete(studentItem: any): void {
+    this.studentService.setDelete(studentItem);
   }
 }
-
-
