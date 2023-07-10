@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class StudentServiceService {
-  private baseUrl = 'http://localhost:8080/api/student'; // Update the base URL with your Node.js server URL
+  private baseUrl = 'http://localhost:8085/api/student'; // Update the base URL with your Node.js server URL
 
   StudentArray: any[] = [];
   isResultLoaded = false;

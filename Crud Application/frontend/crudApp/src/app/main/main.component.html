@@ -1,46 +1,47 @@
 <div class="container mt-4">
-  <div class="card">
-    <h1>Student Registration</h1>
+  <div class="card bg-white shadow-lg rounded-lg p-6">
+    <h1 class="text-3xl font-bold mb-4">Student Registration</h1>
 
     <form (ngSubmit)="onSubmit()" #studentForm="ngForm">
-      <div class="form-group">
-        <label for="stname">Student Name</label>
-        <input type="text" [(ngModel)]="stname" name="stname" class="form-control" id="stname" placeholder="Enter Name" required>
+      <div class="mb-4">
+        <label for="stname" class="text-lg">Student Name</label>
+        <input type="text" [(ngModel)]="stname" name="stname" class="form-control py-2 px-4 border border-gray-300 rounded hover:bg-gray-100 focus:bg-gray-100 focus:outline-none focus:border-blue-500 transition-colors duration-300" id="stname" placeholder="Enter Name" required>
       </div>
 
-      <div class="form-group">
-        <label for="course">Course</label>
-        <input type="text" [(ngModel)]="course" name="course" class="form-control" id="course" placeholder="Enter Course" required>
+      <div class="mb-4">
+        <label for="course" class="text-lg">Course</label>
+        <input type="text" [(ngModel)]="course" name="course" class="form-control py-2 px-4 border border-gray-300 rounded hover:bg-gray-100 focus:bg-gray-100 focus:outline-none focus:border-blue-500 transition-colors duration-300" id="course" placeholder="Enter Course" required>
       </div>
 
-      <div class="form-group">
-        <label for="fee">Fee</label>
-        <input type="text" [(ngModel)]="fee" name="fee" class="form-control" id="fee" placeholder="Enter Fee" required>
+      <div class="mb-4">
+        <label for="fee" class="text-lg">Fee</label>
+        <input type="text" [(ngModel)]="fee" name="fee" class="form-control py-2 px-4 border border-gray-300 rounded hover:bg-gray-100 focus:bg-gray-100 focus:outline-none focus:border-blue-500 transition-colors duration-300" id="fee" placeholder="Enter Fee" required>
       </div>
 
-      <button type="submit" class="btn btn-primary mt-4" [disabled]="!studentForm.form.valid">Save</button>
+      <button type="submit" class="btn btn-primary mt-4 hover:bg-blue-600 hover:text-white transition-colors duration-300" [disabled]="!studentForm.form.valid">Save</button>
     </form>
   </div>
 
-  <div class="container mt-4">
-    <h1>Student Table</h1>
-    <table class="table">
+
+  <div class="mt-4">
+    <h1 class="text-3xl font-bold">Student Table</h1>
+    <table class="w-full table-auto mt-2">
       <thead>
         <tr>
-          <th scope="col">ID</th>
-          <th scope="col">Student Name</th>
-          <th scope="col">Course</th>
-          <th scope="col">Fee</th>
-          <th scope="col">Actions</th>
+          <th scope="col" class="px-4 py-2">ID</th>
+          <th scope="col" class="px-4 py-2">Student Name</th>
+          <th scope="col" class="px-4 py-2">Course</th>
+          <th scope="col" class="px-4 py-2">Fee</th>
+          <th scope="col" class="px-4 py-2">Actions</th>
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let studentItem of studentService.StudentArray">
-          <td>{{ studentItem.id }}</td>
-          <td>{{ studentItem.stname }}</td>
-          <td>{{ studentItem.course }}</td>
-          <td>{{ studentItem.fee }}</td>
-          <td>
+        <tr *ngFor="let studentItem of studentService.StudentArray" class="bg-gray-100">
+          <td class="border px-4 py-2">{{ studentItem.id }}</td>
+          <td class="border px-4 py-2">{{ studentItem.stname }}</td>
+          <td class="border px-4 py-2">{{ studentItem.course }}</td>
+          <td class="border px-4 py-2">{{ studentItem.fee }}</td>
+          <td class="border px-4 py-2">
             <button type="button" class="btn btn-success" (click)="setUpdate(studentItem)">Edit</button>
             <button type="button" class="btn btn-danger" (click)="setDelete(studentItem)">Delete</button>
           </td>
